@@ -1,0 +1,19 @@
+const formServicesGet = require("../../Service/SuperAdmin/formServies")
+
+const formControllerGEt=async(req,res)=>{
+try {
+    const id = req.params["id"]
+     
+    const Data = await formServicesGet.formServices(id)
+    res.send("ok")
+
+}
+catch(err){
+    res.send("INTERNAL ERROR")
+}
+  
+
+
+
+}
+module.exports={formControllerGEt}
